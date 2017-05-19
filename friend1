@@ -1,0 +1,27 @@
+** A friend function **
+
+**This programme demonstartes how external access can be created of the class functions/ properties etc through special priveledges
+conveyed to the "friend" function through the "friend" keyword as pre designated within the class definition.
+
+
+#include <iostream>
+using namespace std;
+
+class Bessa{
+public:
+    Bessa () {Bassfoo=0;}
+private:
+  int Bassfoo;
+friend
+void Bessasfriend (Bessa &bobj);
+};
+
+void Bessasfriend (Bessa &bobj)
+{sfo.Bassfoo = 99;
+cout << sfo.Bassfoo << endl;
+ }
+
+int main () {
+    Bessa bob;
+    Bessasfriend(bob);
+}
